@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5072675B-42E4-4D62-AE50-14D8558672CC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>company</RootNamespace>
+    <AssemblyName>company</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\app\Bedo\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add Degree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add Degree.Designer.cs">
+      <DependentUpon>Add Degree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="applicant home page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="applicant home page.Designer.cs">
+      <DependentUpon>applicant home page.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applicants GUIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applicants GUIR.Designer.cs">
+      <DependentUpon>Applicants GUIR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="applicants.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>applicants.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="check pending.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="check pending.Designer.cs">
+      <DependentUpon>check pending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="chooose your report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="chooose your report.Designer.cs">
+      <DependentUpon>chooose your report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="choose your required task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="choose your required task.Designer.cs">
+      <DependentUpon>choose your required task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="company.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>company.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="companygui.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="companygui.Designer.cs">
+      <DependentUpon>companygui.cs</DependentUpon>
+    </Compile>
+    <Compile Include="display recommended.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display recommended.Designer.cs">
+      <DependentUpon>display recommended.cs</DependentUpon>
+    </Compile>
+    <Compile Include="display user app.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="display user app.Designer.cs">
+      <DependentUpon>display user app.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Job Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Job Report.Designer.cs">
+      <DependentUpon>Job Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="job.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>job.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="offerjob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="offerjob.Designer.cs">
+      <DependentUpon>offerjob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="previous job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="previous job.Designer.cs">
+      <DependentUpon>previous job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registration.Designer.cs">
+      <DependentUpon>registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="remove job .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="remove job .Designer.cs">
+      <DependentUpon>remove job .cs</DependentUpon>
+    </Compile>
+    <Compile Include="search for a job.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search for a job.Designer.cs">
+      <DependentUpon>search for a job.cs</DependentUpon>
+    </Compile>
+    <Compile Include="start screen for customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="start screen for customer.Designer.cs">
+      <DependentUpon>start screen for customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="the new.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="the new.Designer.cs">
+      <DependentUpon>the new.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update CV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update CV.Designer.cs">
+      <DependentUpon>update CV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updatejob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="updatejob.Designer.cs">
+      <DependentUpon>updatejob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewapplicants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewapplicants.Designer.cs">
+      <DependentUpon>viewapplicants.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewcv.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewcv.Designer.cs">
+      <DependentUpon>viewcv.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add Degree.resx">
+      <DependentUpon>Add Degree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="applicant home page.resx">
+      <DependentUpon>applicant home page.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applicants GUIR.resx">
+      <DependentUpon>Applicants GUIR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="applicants.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>applicants.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="check pending.resx">
+      <DependentUpon>check pending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="chooose your report.resx">
+      <DependentUpon>chooose your report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="choose your required task.resx">
+      <DependentUpon>choose your required task.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="company.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>company.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="companygui.resx">
+      <DependentUpon>companygui.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display recommended.resx">
+      <DependentUpon>display recommended.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="display user app.resx">
+      <DependentUpon>display user app.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Job Report.resx">
+      <DependentUpon>Job Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="job.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>job.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="offerjob.resx">
+      <DependentUpon>offerjob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="previous job.resx">
+      <DependentUpon>previous job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="registration.resx">
+      <DependentUpon>registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="remove job .resx">
+      <DependentUpon>remove job .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search for a job.resx">
+      <DependentUpon>search for a job.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="start screen for customer.resx">
+      <DependentUpon>start screen for customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="the new.resx">
+      <DependentUpon>the new.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update CV.resx">
+      <DependentUpon>update CV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updatejob.resx">
+      <DependentUpon>updatejob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewapplicants.resx">
+      <DependentUpon>viewapplicants.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewcv.resx">
+      <DependentUpon>viewcv.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

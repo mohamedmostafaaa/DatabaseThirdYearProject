@@ -1,0 +1,2 @@
+E:\Courses\2nd term courses\DBMS\2015-2016\ODP.Net Part 7\DisconnectedMode_Startup\DisconnectedMode_Startup\bin\Debug\DisconnectedMode_Startup.exe.config
+E:\FCIS\2016-2017\Second Term\DB 2017\Labs\Lab 3\DisconnectedMode_Startup\DisconnectedMode_Startup\bin\Debug\DisconnectedMode_Startup.exe.config

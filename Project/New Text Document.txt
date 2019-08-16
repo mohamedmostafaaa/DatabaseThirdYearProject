@@ -1,0 +1,129 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Oracle.DataAccess.Client;
+using Oracle.DataAccess.Types; 
+
+namespace company
+{
+    public partial class login : Form
+    {
+        string enteredtype;        private string userSSN;
+        private string enteredUsername;
+        private string enteredPassword;
+        string ordb = "data source=orcl; user id=scott; password=tiger;";
+        OracleConnection conn;
+
+        public login()
+        {
+            InitializeComponent();
+            textBox2.PasswordChar = '*';
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            enteredUsername = textBox1.Text;
+            enteredPassword = textBox2.Text;
+            if (enteredtype == "Applicants")
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "select * from applicants";
+                cmd.CommandType = CommandType.Text;
+                userSSN = "";
+
+                OracleDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    if (enteredUsername == dr[1].ToString() && enteredPassword == dr[4].ToString())
+                    {
+                        userSSN = dr[0].ToString();
+                        break;
+                    }
+                }
+                if (userSSN != "")
+                {
+                    //  MessageBox.Show(userSSN);
+                    applicant_home_page b = new applicant_home_page(userSSN);
+                    b.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password");
+                }
+                button1.Enabled = false;
+                //applicant_home_page b = new applicant_home_page();
+                //b.Show();
+            }
+            else // login as a company (enteredtype == "comapny";
+            {
+                OracleCommand cmd = new OracleCommand();
+                cmd.Connection = conn;
+                cmd.CommandText = "select * from company";
+                cmd.CommandType = CommandType.Text;
+                userSSN = "";
+
+                OracleDataReader dr = cmd.ExecuteReader();
+                while(dr.Read())
+                {
+                    if (enteredUsername == dr[1].ToString() && enteredPassword == dr[4].ToString())
+                    {
+                        userSSN = dr[0].ToString();
+                        break;
+                    }
+                }
+                if (userSSN != "")
+                {
+                    MessageBox.Show(userSSN);
+                    applicant_home_page b = new applicant_home_page(userSSN);
+                    b.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Username or Password");
+                }
+                button1.Enabled = false;
+
+            }
+        }
+
+        private void login_Load(object sender, EventArgs e)
+        {
+            conn = new OracleConnection(ordb);
+            conn.Open();
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            enteredtype = "Applicants";
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            enteredtype = "Company";
+        }
+
+        private void login_Load_1(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
